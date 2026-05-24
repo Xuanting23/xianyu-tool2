@@ -43,7 +43,7 @@ export function Header() {
         zIndex: 50,
       }}>
         {/* logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginRight: 24 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginRight: 16 }}>
           <div style={{
             width: 32, height: 32, borderRadius: 8,
             background: 'linear-gradient(135deg, #FF4520 0%, #ff6b4a 100%)',
@@ -52,7 +52,7 @@ export function Header() {
           }}>
             🐟
           </div>
-          <span style={{ fontSize: 15, fontWeight: 700, color: '#333', whiteSpace: 'nowrap' }}>
+          <span className="hide-mobile" style={{ fontSize: 15, fontWeight: 700, color: '#333', whiteSpace: 'nowrap' }}>
             鱼排版
           </span>
         </div>
@@ -64,7 +64,7 @@ export function Header() {
               key={tab.id}
               onClick={() => setMode(tab.id)}
               style={{
-                padding: '6px 14px',
+                padding: '6px 10px',
                 borderRadius: 8,
                 border: 'none',
                 background: mode === tab.id ? '#FF4520' : 'transparent',
@@ -76,7 +76,7 @@ export function Header() {
               }}
             >
               <span>{tab.icon}</span>
-              <span>{tab.label}</span>
+              <span className="hide-mobile">{tab.label}</span>
             </button>
           ))}
         </nav>

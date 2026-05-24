@@ -91,3 +91,44 @@ body {
   background: #ddd;
   border-radius: 2px;
 }
+
+/* ── 响应式工具类 ── */
+@media (max-width: 639px) {
+  .hide-mobile {
+    display: none !important;
+  }
+  .show-mobile-only {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .show-mobile-only {
+    display: none !important;
+  }
+}
+
+/* 手机端底部 tab 栏 */
+.mobile-tab-bar {
+  display: none;
+}
+
+@media (max-width: 639px) {
+  .mobile-tab-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: #fff;
+    border-top: 1px solid #e8e8e8;
+    z-index: 100;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+  }
+
+  /* 给 main 内容区留出底部 tab 栏的空间 */
+  .mobile-main-content {
+    padding-bottom: 56px;
+  }
+}
